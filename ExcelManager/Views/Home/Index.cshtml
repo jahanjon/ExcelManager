@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@{
+    ViewData["Title"] = "آپلود فایل اکسل";
+}
+
+<h2>آپلود فایل اکسل</h2>
+
+<form asp-action="UploadExcel" asp-controller="ReportSheet" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="excelFile">انتخاب فایل اکسل</label>
+        <input type="file" id="excelFile" name="excelFile" class="form-control" accept=".xls,.xlsx" required />
+    </div>
+    <button type="submit" class="btn btn-primary">آپلود</button>
+</form>
